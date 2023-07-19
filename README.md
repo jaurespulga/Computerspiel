@@ -17,11 +17,8 @@ In der freiwilligen Aufgabe 4 können Sie einen Computerspieler implementieren.
 Testfälle: Für das erfolgreiche Ausführen der Methode sowie Tests für die möglichen Ausnahmen.
 2https://modhb.uni-kl.de/mhb/modules/INF-02-20-M-2/
 Aufgabe 1 Gerichtete Graphen
-In der Projektvorlage finden Sie die Schnittstelle de.rptu.programmierpraktikum2023.p2.a1.Graph. Die einzelnen Methoden sind mit Javadoc versehen. Lesen Sie sich den restlichen Aufgabentext sowie die Javadoc
-Kommentare durch, um die Schnittstelle zu verstehen.
-Die Schnittstelle Graph modelliert einen gerichteten Graphen. Der Graph besteht aus einer Menge von Knoten (engl. node). Zwischen den Knoten gibt es Kanten (engl. edge), die jeweils eine Richtung haben. Für
-zwei Knoten a, b unterscheiden wir also zwischen den Kanten a → b und b → a. Der Graph kann keine,
-eine oder beide dieser Kanten enthalten. Dieselbe Kante (also in derselben Richtung) kann jedoch nicht
+In der Projektvorlage finden Sie die Schnittstelle de.rptu.programmierpraktikum2023.p2.a1.Graph. Die einzelnen Methoden sind mit Javadoc versehen. Lesen Sie sich den restlichen Aufgabentext sowie die Javadoc Kommentare durch, um die Schnittstelle zu verstehen.
+Die Schnittstelle Graph modelliert einen gerichteten Graphen. Der Graph besteht aus einer Menge von Knoten (engl. node). Zwischen den Knoten gibt es Kanten (engl. edge), die jeweils eine Richtung haben. Für zwei Knoten a, b unterscheiden wir also zwischen den Kanten a → b und b → a. Der Graph kann keine, eine oder beide dieser Kanten enthalten. Dieselbe Kante (also in derselben Richtung) kann jedoch nicht
 mehrfach enthalten sein. Auch die Kante a → a ist möglich.
 In den Knoten speichern wir Daten (engl. data). Jede Kante ist mit einer Gewichtung (engl. weight) versehen. Die Typparameter D und W der Schnittstelle sind die Typen für die Daten und Gewichtungen.
 Der Benutzer der Schnittstelle muss die Knoten durch eindeutige Identifier vom Typ int referenzieren. Mit
@@ -75,12 +72,9 @@ Nach jedem Spielzug wird überprüft, ob weitere Knoten ihre Farbe ändern müss
 • wtotal(x) die Summe der Kantengewichtungen aller eingehenden Kanten ? → x und
 • für eine Spieler-Farbe c , WHITE sei wc(x) die Summe der Kantengewichtungen aller eingehenden
 Kanten y → x von Knoten y, deren aktuelle Farbe c ist.
-Falls wc(x) >
-wtotal(x)
-2
-ist, so erhält Knoten x automatisch die Farbe c. Beachten Sie, dass die automatische
-Umfärbung eines Knotens weitere Umfärbungen auslösen kann. Ein Knoten kann niemals zur neutralen
-Farbe weiß umgefärbt werden. Ein paar konkrete Beispiele finden Sie im Anhang.
+Falls W_c(x) > W_total(x) / 2 ist, so erhält Knoten x automatisch die Farbe c. Beachten Sie, dass die automatische
+Umfärbung eines Knotens weitere Umfärbungen auslösen kann. Ein Knoten kann niemals zur neutralen Farbe weiß umgefärbt werden. 
+Ein paar konkrete Beispiele finden Sie im Anhang.
 Kein gültiger Spielzug ist es, die Farbe eines Knotens zu ändern, wenn dieser gemäß der eben genannten
 Regel seine aktuelle Farbe aufgezwungen bekommt. Es ist jedoch erlaubt, einen Knoten, der bereits die
 eigene Farbe hat, erneut einzufärben. Damit verschenkt man zwar seinen Spielzug, aber es ist regelkonform.
